@@ -31,17 +31,17 @@ class hiddenLayer(Layer):
                 self.weights[i][j] = random.uniform(-a, a)
 
     def updateOutputs(self, inp=numpy.matrix):
-        temp = (self.weights.T) * inp
+        temp = numpy.dot(self.weights.T, inp)
         self.outputs = numpy.tanh(temp)
         return self.outputs
 
     def updateWeights(self, sigma=numpy.matrix, eta=0.0):
         # back prop partial(q) = output(q) * (1 - output(q)) * SIGMAoverr w(qr)* partial deriv(r)
-        partial = self.outputs * (1 - self.outputs) * sigma
+        partial = numpy.dot(numpy.dot(self.outputs, (1 - self.outputs.T)), sigma)
         # new weight(p>q) = old weight(p>q) + eta * output(p) * partial deriv from back prop(q)
-        self.weights = self.weights * partial.T * eta
+        self.weights = self.weights + numpy.dot(self.prevLayer.outputs, partial.T) * eta
         # return SIGMAoverq w(pq)* partial deriv(q)
-        return self.weights * partial
+        return numpy.dot(self.weights, partial)
 
 
 class outputLayer(Layer):
@@ -59,17 +59,17 @@ class outputLayer(Layer):
                 self.weights[i][j] = random.uniform(-a, a)
 
     def updateOutputs(self, inp=numpy.matrix):
-        temp = (self.weights.T) * inp
-        self.outputs = temp * numpy.ones(shape=(self.nDim, 1))
+        temp = numpy.dot(self.weights.T, inp)
+        self.outputs = numpy.tanh(temp)
         return self.outputs
 
     def updateWeights(self, eta=0.0):
         # partial(q) = (target(q) - output(q)) * output(q) * (1 - output(q))
-        partial = (self.targets - self.outputs) * self.outputs * (1 - self.outputs)
+        partial = numpy.dot(numpy.dot((self.targets - self.outputs), self.outputs.T), (1 - self.outputs))
         # new weight(p>q) = old weight(p>q) + eta * output(p) * partial deriv from back prop(q)
-        self.weights = self.weights * partial.T * eta
+        self.weights = self.weights + numpy.dot(self.prevLayer.outputs, partial.T) * eta
         # return SIGMAoverq w(pq)* partial deriv(q)
-        return self.weights * partial
+        return numpy.dot(self.weights, partial)
 
     def errorFunc(self):
         temp = numpy.power((self.targets - self.outputs),2)
@@ -80,16 +80,20 @@ class MLP:
     def __init__(self, inps=numpy.matrix, targs=numpy.matrix, i=0, h=0, o=0, d=0, l=0, lr=0.0):
         self.iLayer = Layer(i, d)
         self.nLayers = l
+        self.numInputs = i
         self.nDim = d
         self.hLayers = []
         last = self.iLayer
-        for a in range(l):
-            numins = h
-            if a == 0:
-                numins = i
-            last = hiddenLayer(last, numins, h, d)
-            self.hLayers.append(last)
-        self.oLayer = outputLayer(targs, last, h, o, d)
+        if l == 0:
+            self.oLayer = outputLayer(targs, last, i, o, d)
+        else:
+            for a in range(l):
+                numins = h
+                if a == 0:
+                    numins = i
+                last = hiddenLayer(last, numins, h, d)
+                self.hLayers.append(last)
+            self.oLayer = outputLayer(targs, last, h, o, d)
         self.eta = lr
         self.iLayer.updateOutputs(inps)
 
@@ -119,9 +123,20 @@ class MLP:
             epochCount += 1
             self.calcOutputs()
             error = self.oLayer.errorFunc()
-        print "Error: " + error + " Epoch Count: " + epochCount
+        print "Error: "
+        print error
+        print " Epoch Count: "
+        print epochCount
 
     def test(self, inp=numpy.matrix):
+        orginp = self.iLayer.getOutputs()
         self.iLayer.updateOutputs(inp)
         self.calcOutputs()
-        return self.oLayer.getOutputs()
+        output = numpy.zeros(shape=(self.numInputs, self.nDim + 1))
+        for i in range(self.numInputs):
+            output[i][0] = self.oLayer.outputs[i][0]
+            for j in range(self.nDim):
+                output[i][j + 1] = orginp[i][j]
+        return output
+
+

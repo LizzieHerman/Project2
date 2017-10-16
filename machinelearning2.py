@@ -1,9 +1,15 @@
+'''
+created on Oct 4 2017
+@author RyanFreivalds, LizzieHerman
+'''
 #Alright, so this will give us our grid,
 #but we need a way to pull values out of it for inputs.
 
 #import numpy as np
 import random
 import numpy
+import mlPerceptron
+import RadialBasis
 
 #need to make layers, not individual nodes. Still unsure if there's any way to "keep our inputs intact" but as of now it seems we have to split every simension into another class.
 
@@ -23,16 +29,7 @@ def rosenbrock(variables):
         value = value + (1 - variables[x])**2 + 100*(variables[x+1]-variables[x]**2)**2 #the Equasion taken straight from the assignment sheet,
     #combinedInputs.append(variables, value) 
     return value
-        
-        
-#Makes a matrix to represent the edges that connect layers to facilitate the matric multiplication between an input matrix and a layer of nodes. 
-#Then just need the activation function for the nodes to turn the result into another input.
-def newLayer(rows, columns, weight):    #weight should start arbitrairily low, such as .1, and ramp up/refine with backprop
-    for x in range(rows):    
-        rowVal = [weight for i in range(columns)]
-    weightMatrix.append(rowVal) #adding a new row to our list of rows.
-#last issue is updating individual weights algorithmically -- or just save each individual layer of weights -- so we can continue to use those.
-        
+
 #Our FUNCTIONING Input generation methods:
 
 #For each of our 100 indeces, our X counts from 0 to 9, and then our Y iterates by 1. The last value is the Rosenbrock of our X and Y.    
@@ -106,7 +103,7 @@ def smallRosen3D():
            rosenOutput[trueIndex][1] = int(y/3)%3  #our "y" position counts how many 3s of Xes have occured
            rosenOutput[trueIndex][2] = y%3       #our "z" position which counts how many 3s of Ys has occured
            rosenOutput[trueIndex][3] = rosenbrock([x%3,int(y/3)%3,y%3])    #our last position is always the Rosenbrock of X and Y and Z
-           print(rosenOutput[trueIndex])  #To display the output of this function, decomment this line. 
+           #print(rosenOutput[trueIndex])  #To display the output of this function, decomment this line.
            trueIndex+=1
      return rosenOutput
           
@@ -119,7 +116,7 @@ def smallRosen2D():
            rosenOutput[trueIndex][1] = y%3       #our "z" position which counts how many 3s of Ys has occured
            rosenOutput[trueIndex][2] = rosenbrock([x%3,y%3])    #our last position is always the Rosenbrock of X and Y and Z
            #print trueIndex Debugging
-           print(rosenOutput[trueIndex])  #To display the output of this function, decomment this line. 
+           #print(rosenOutput[trueIndex])  #To display the output of this function, decomment this line.
            trueIndex +=1
      #print rosenOutput Debugging
      return rosenOutput
@@ -135,159 +132,98 @@ def assessOutput(output):
     tollerenceVal = 0
     accuracy = 0
     
-    while (accuracy < float(0.49)): #our accuracy cutoff
-        tollerenceVal+=1
-        numCorrect = 0
-        criticalIndex = len(output[0])-1    #where the rosenbrock output is stored
-        #print criticalIndex
-        vectorIndex = len(output[0])-1      #the range of indecies where vector coordubates are kept
-        #print vectorIndex
-        for x in range(0, len(output)):    #for every vector in our output matrix
+    #while (accuracy < float(0.49)): #our accuracy cutoff
+    tollerenceVal+=1
+    numCorrect = 0
+    criticalIndex = len(output[0])-1    #where the rosenbrock output is stored
+    #print criticalIndex
+    vectorIndex = len(output[0])-1      #the range of indecies where vector coordubates are kept
+    #print vectorIndex
+    for x in range(0, len(output)):    #for every vector in our output matrix
 
-            vector = []
-            for y in range(0, vectorIndex): #for all vector coordinates
-                vector.extend([output[x][y]])   #put them together so we can plug them back into the rosenbrock
+        vector = []
+        for y in range(0, vectorIndex): #for all vector coordinates
+            vector.extend([output[x][y]])   #put them together so we can plug them back into the rosenbrock
 
-            #print vector #debugging line
-            actualValue = rosenbrock(vector)    #the actual value our function was trying to approximate, for this vector
-            #print actualValue, output[x][criticalIndex] #debugging line
+        #print vector #debugging line
+        actualValue = rosenbrock(vector)    #the actual value our function was trying to approximate, for this vector
+        #print actualValue, output[x][criticalIndex] #debugging line
 
-            if output[x][criticalIndex] == actualValue:
+        if output[x][criticalIndex] is actualValue:
+            numCorrect +=1
+            #print"exact match" #debugging line
+        elif output[x][criticalIndex] < actualValue:  #if we under-approximated
+            if output[x][criticalIndex] * tollerenceVal >= actualValue: #check if the tollerance value brings us in "range" of a correct answer
                 numCorrect +=1
-                #print"exact match" #debugging line
-            elif output[x][criticalIndex] < actualValue:  #if we under-approximated
-                if output[x][criticalIndex] * tollerenceVal >= actualValue: #check if the tollerance value brings us in "range" of a correct answer
-                    numCorrect +=1
-                    #print "tollerance match" #debugging line
-            elif output[x][criticalIndex] > actualValue:  #if we over-approximated, do the same
-                if output[x][criticalIndex] / tollerenceVal <= actualValue:
-                    numCorrect +=1
-                    #print "second tollerance match" #debugging line
-        accuracy = (numCorrect/float(len(output)))
-        printableAcc = '{:1.3f}'.format(accuracy)
-        print ("Accuracy of ", printableAcc, "for tollerance of ", tollerenceVal)
+                #print "tollerance match" #debugging line
+        elif output[x][criticalIndex] > actualValue:  #if we over-approximated, do the same
+            if output[x][criticalIndex] / tollerenceVal <= actualValue:
+                numCorrect +=1
+                #print "second tollerance match" #debugging line
+    accuracy = (numCorrect/float(len(output)))
+    printableAcc = '{:1.3f}'.format(accuracy)
+    print ("Accuracy of ", printableAcc, "for tollerance of ", tollerenceVal)
     print ("Final tolerance of ", tollerenceVal, " achieved an accuracy of ", printableAcc)
     
     #algortithm training logic to be implemented.
-def train(input):
-    pass
+def train(input, test):
+    dim = len(input[0])
+    length = len(input)
+    points = numpy.zeros(shape=(length, dim-1))
+    targs = numpy.zeros(shape=(length,1))
+    tpoints = numpy.zeros(shape=(length, dim-1))
+    ttargs = numpy.zeros(shape=(length,1))
+    for i in range(length):
+        targs[i] = input[i][dim - 1]
+        ttargs[i] = test[i][dim-1]
+        for j in range(dim-1):
+            points[i][j] = input[i][j]
+            tpoints[i][j] = test[i][j]
+    for a in range(3):
+        print "MLP- Hidden Layers: "
+        print a
+        print " # inputs: "
+        print length
+        print " Nodes in Hidden Layers: "
+        print 15
+        print " Learning Rate: 0.1 RandWeightBounds: [-0.1,0.1]\n"
+        percept = mlPerceptron.MLP(points, targs, length, (length - 5), length, dim - 1, a, 0.1)
+        percept.train(0.1)
+        output = percept.test(tpoints)
+        assessOutput(output)
+    '''
+    for a in range(3):
+        print "RBF- Activation Function: "
+        print a
+        print " # inputs: "
+        print length
+        print " Clusters: "
+        print int(length/3)
+        print " Learning Rates: 0.1 RandWeightBounds: [-0.1,0.1]\n"
+        radial = RadialBasis.RBF(points,targs,length,length/3,length,dim-1)
+        radial.train(0.1,0.1,0.1,a)
+        output = radial.test(tpoints)
+        assessOutput(output)'''
+
 
 #generates a manageable sample from our compelete range of inputs for use in K-fold cross validation
 #four our smallest, and only for our smallest sample spaces, it makes more sense just to use the entire 3 by 3 sample size.
-def extractSample(input, sampleSize, numSamples):
+def extractSample(input, sampleSize):
+
     #print "occured"
     sampleEntry = [0 for y in range(sampleSize)]
-    sample = [[] for y in range(numSamples)]
-    for i in range(sampleSize): 
-        for j in range(numSamples):
-            sampleEntry[j] = input[random.randint(0,len(input))]
+    sample = [[] for y in range(2)]
+    for j in range(sampleSize):
+        for i in range(2):
+            sampleEntry[j] = input[random.randint(0,len(input)-1)]
             sample[i].append(sampleEntry[j])
-        print sample[i]
-    #we have our samples, now we perform cross validation:
-    for k in range(sampleSize):     #our K folds
-        for i in range(sampleSize): 
-            if k == i:
-                pass
-            else:
-                train(sample[i]) #we train on all but one sample,
-        assessOutput(sample[k]) #then validate our tests using that one excluded sampme, and repeat K times.
+    train(sample[0],sample[1])
         
-
-def selftest():
-    print "Initial values:"
-    testtest1 = smallRosen2D()
-    print "Second Matrix:"
-    testtest2 = smallRosen3D()
-    
-    print
-    print
-    print "Modified first matrix: initial Accuracy should be 33% and final Tolerance Value 2"
-
-    testtest1[0][2] = 2
-    print testtest1[0]
-    testtest1[1][2] = 51
-    print testtest1[1]
-    testtest1[2][2] = 801
-    print testtest1[2]
-    testtest1[3][2] = 51
-    print testtest1[3]
-    testtest1[4][2] = 101
-    print testtest1[4]
-    testtest1[5][2] = 851
-    print testtest1[5]
-    print testtest1[6],  'unmodified'
-    print testtest1[7],  'unmodified'
-    print testtest1[8],  'unmodified'
-    
-    print
-    print
-    print "Modified first matrix: initial Accuracy should be 7% and final Tolerance Value 5"
-    
-    testtest2[0][3] = .4
-    print testtest2[0]
-    testtest2[1][3] = 20.2
-    print testtest2[1]
-    testtest2[2][3] = 321
-    print testtest2[2]
-    testtest2[3][3] = 510
-    print testtest2[3]
-    testtest2[4][3] = 1005
-    print testtest2[4]
-    testtest2[5][3] = 851
-    print testtest2[5]
-    testtest2[6][3] = 1
-    print testtest2[6]
-    testtest2[7][3] = 51
-    print testtest2[7]
-    testtest2[8][3] = 4001
-    print testtest2[8]
-    testtest2[9][3] = 1005
-    print testtest2[9]
-    testtest2[10][3] = 500
-    print testtest2[10]
-    testtest2[11][3] = 5005
-    print testtest2[11]
-    testtest2[12][3] = 505
-    print testtest2[12]
-    testtest2[13][3] = 851
-    print testtest2[13]
-    testtest2[14][3] = 181
-    print testtest2[14]
-    testtest2[15][3] = 1005
-    print testtest2[15]
-    testtest2[16][3] = 1000
-    print testtest2[16]
-    testtest2[17][3] = 5005
-    print testtest2[17]
-    testtest2[18][3] = 10010
-    print testtest2[18]
-    testtest2[19][3] = 341
-    print testtest2[19]
-    testtest2[20][3] = 10010
-    print testtest2[20]
-    testtest2[21][3] = 6510
-    print testtest2[21]
-    testtest2[22][3] = 5005
-    print testtest2[22]
-    testtest2[23][3] = 261
-    print testtest2[23]
-    testtest2[24][3] = 161
-    print testtest2[24]
-    print testtest2[25], 'unmodified'
-    print testtest2[26], 'unmodified'
-    
-    #print len(testtest2) #returns 27, as expected
-    
-    assessOutput(testtest1)
-    print
-    assessOutput(testtest2)
-
-
 
 
 #selftest()
 fullInputRange = rosen4D()
-extractSample(fullInputRange,10,10)
+extractSample(fullInputRange,20)
 
 
 #input = an m by n matrix, where n is our number of examples and m is how many features each example has. 
