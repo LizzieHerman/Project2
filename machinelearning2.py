@@ -75,7 +75,46 @@ def rosen4D():
         zedCount +=1
      #print "occured1"
      return rosenOutput
-        
+#For each of our 10000 indeces, our X counts from 0 to 9, and then our Y iterates by 1. When Y iterates past 9 we return it to 0 and iterate Z, and when Z iterates past 9... The last value is the Rosenbrock of our X and Y.
+def rosen5D():
+     rosenOutput = [[y for x in range(5+1)] for y in range(10000)]
+     zedCount = 0
+     trueIndex = 0
+     for y in range (100):
+        for x in range (100):
+           rosenOutput[trueIndex][0] = x%10       #our "x" position counts from 0 to 9
+           rosenOutput[trueIndex][1] = int(x/10)  #our "y" position counts how many 10s of Xes have occured
+           rosenOutput[trueIndex][2] = y%10       #our "z" position which counts how many 10s of Ys has occured
+           rosenOutput[trueIndex][3] = int(zedCount / 10)  # our dimension four position, which continues the trend
+           rosenOutput[trueIndex][4] = int(zedCount % 10)  # our dimension 5 position, which continues the trend
+           rosenOutput[trueIndex][5] = rosenbrock([x % 10, int(x / 10), y % 10, int(zedCount / 10), int(zedCount%10)])  # our last position is always the Rosenbrock of X and Y and Z
+           #print(rosenOutput[trueIndex])  #To display the output of this function, decomment this line.
+           #print (x*(y+1), trueIndex) #debugging line
+           trueIndex += 1
+        zedCount +=1
+     #print "occured1"
+     return rosenOutput
+#For each of our 10000 indeces, our X counts from 0 to 9, and then our Y iterates by 1. When Y iterates past 9 we return it to 0 and iterate Z, and when Z iterates past 9... The last value is the Rosenbrock of our X and Y.
+def rosen6D():
+     rosenOutput = [[y for x in range(6+1)] for y in range(10000)]
+     zedCount = 0
+     trueIndex = 0
+     for y in range (100):
+        for x in range (100):
+           rosenOutput[trueIndex][0] = x%10       #our "x" position counts from 0 to 9
+           rosenOutput[trueIndex][1] = int(x/10)  #our "y" position counts how many 10s of Xes have occured
+           rosenOutput[trueIndex][2] = y%10       #our "z" position which counts how many 10s of Ys has occured
+           rosenOutput[trueIndex][3] = int(zedCount/10)       #our dimension four position, which continues the trend
+           rosenOutput[trueIndex][4] = int(zedCount % 10)  # our dimension five position, which continues the trend
+           rosenOutput[trueIndex][5] = int(y / 10)  # our dimension six position, which continues the trend
+           rosenOutput[trueIndex][6] = rosenbrock([x % 10, int(x / 10), y % 10, int(zedCount / 10), int(zedCount%10), int(y/10)])  # our last position is always the Rosenbrock of X and Y and Z
+           #print(rosenOutput[trueIndex])  #To display the output of this function, decomment this line.
+           #print (x*(y+1), trueIndex) #debugging line
+           trueIndex += 1
+        zedCount +=1
+     #print "occured1"
+     return rosenOutput
+
 #these "small" methods are functionally identical to the above, but make 3 by 3 planes rather than 10 by 10s.
 def smallRosen4D():       
      rosenOutput = [[y for x in range(4+1)] for y in range(81)]
@@ -173,56 +212,63 @@ def train(input, test):
     targs = numpy.zeros(shape=(length,1))
     tpoints = numpy.zeros(shape=(length, dim-1))
     ttargs = numpy.zeros(shape=(length,1))
+    output = numpy.zeros(shape=(length, dim))
     for i in range(length):
         targs[i] = input[i][dim - 1]
         ttargs[i] = test[i][dim-1]
+        output[i][0] = test[i][dim-1]
         for j in range(dim-1):
             points[i][j] = input[i][j]
             tpoints[i][j] = test[i][j]
+            output[i][j] = test[i][j+1]
     for a in range(3):
-        print "MLP- Hidden Layers: "
-        print a
-        print " # inputs: "
-        print length
-        print " Nodes in Hidden Layers: "
-        print 15
-        print " Learning Rate: 0.1 RandWeightBounds: [-0.1,0.1]\n"
-        percept = mlPerceptron.MLP(points, targs, length, (length - 5), length, dim - 1, a, 0.1)
+        print "\nMLP- Hidden Layers: " + str(a) + " # inputs: " + str(length) + " Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]"
+        percept = mlPerceptron.MLP(points, targs, length, (length - 5), length, dim - 1, a, 0.5)
         percept.train(0.1)
-        output = percept.test(tpoints)
+        #output = percept.test(tpoints)
         assessOutput(output)
-    '''
+
     for a in range(3):
-        print "RBF- Activation Function: "
-        print a
-        print " # inputs: "
-        print length
-        print " Clusters: "
-        print int(length/3)
-        print " Learning Rates: 0.1 RandWeightBounds: [-0.1,0.1]\n"
+        if a == 0:
+            name = "Linear"
+        elif a == 1:
+            name = "Guassian"
+        else:
+            name = "Hardy's"
+        print "\nRBF- Activation Function: " + name + " # inputs: " + str(length) + " Clusters: " + str(length/3) +  " Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]"
         radial = RadialBasis.RBF(points,targs,length,length/3,length,dim-1)
-        radial.train(0.1,0.1,0.1,a)
-        output = radial.test(tpoints)
-        assessOutput(output)'''
+        radial.train(0.5,0.1,0.1,a)
+        #output = radial.test(tpoints)
+        assessOutput(output)
 
 
 #generates a manageable sample from our compelete range of inputs for use in K-fold cross validation
 #four our smallest, and only for our smallest sample spaces, it makes more sense just to use the entire 3 by 3 sample size.
+#were using 5 X 2 cross validation
 def extractSample(input, sampleSize):
-
     #print "occured"
-    sampleEntry = [0 for y in range(sampleSize)]
-    sample = [[] for y in range(2)]
-    for j in range(sampleSize):
-        for i in range(2):
-            sampleEntry[j] = input[random.randint(0,len(input)-1)]
-            sample[i].append(sampleEntry[j])
-    train(sample[0],sample[1])
+    for a in range(5):
+        sampleEntry = [0 for y in range(sampleSize)]
+        sample = [[] for y in range(2)]
+        for j in range(sampleSize):
+            for i in range(2):
+                sampleEntry[j] = input[random.randint(0,len(input)-1)]
+                sample[i].append(sampleEntry[j])
+        train(sample[0],sample[1])
+        train(sample[1],sample[0])
         
 
 
 #selftest()
+fullInputRange = rosen2D()
+extractSample(fullInputRange,20)
+fullInputRange = rosen3D()
+extractSample(fullInputRange,20)
 fullInputRange = rosen4D()
+extractSample(fullInputRange,20)
+fullInputRange = rosen5D()
+extractSample(fullInputRange,20)
+fullInputRange = rosen6D()
 extractSample(fullInputRange,20)
 
 

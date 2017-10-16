@@ -20,7 +20,7 @@ class Cluster:
     def genRandVecs(self):
         for i in range(self.k):
             for j in range(self.dim):
-                self.centroids[i][j] = random.uniform(self.low, self.high)
+                self.centroids[i][j] = random.randint(self.low, self.high)
             self.clusters.update({i:[]})
 
     def assignPoints(self, points=numpy.matrix):
@@ -40,18 +40,19 @@ class Cluster:
             # reinitialize if this happens
             if self.clusters.get(i) is None:
                 for j in range(self.dim):
-                    newCentroids[i][j] = random.uniform(self.low, self.high)
+                    newCentroids[i][j] = random.randint(self.low, self.high)
             else:
-                a = 0
+                a = 1
                 for clust in self.clusters.get(i):
                     a += 1
                     temp = temp + clust
                 temp = temp / a
+                temp = temp.astype(int)
                 newCentroids[i] = temp
         return newCentroids
 
     def shouldStop(self, newCentroids):
-        if self.numIters >= 1000:
+        if self.numIters >= 100000:
             return True
         return numpy.array_equal(newCentroids, self.centroids)
 
@@ -67,6 +68,7 @@ class Cluster:
                 del val[:]
             self.assignPoints(points)
             newCentroids = self.updateCentroids(points)
+        print str(self.k) + "-Clustering:   Iteration Count: " + str(self.numIters)
         return newCentroids
 
 class RBF:
@@ -174,15 +176,12 @@ class RBF:
         self.setWeights(a)
         self.calcOutput()
         error = self.errorFunc()
-        while(error > 0.5):
+        while(error > 0.5 and epochCount < 100000):
             self.epoch(weta, seta)
             epochCount += 1
             self.calcOutput()
             error = self.errorFunc()
-            print "Error: "
-            print error
-            print " Epoch Count: "
-            print epochCount
+            print "Error: " + str(error) + " Epoch Count: " + str(epochCount)
 
     def test(self, inp=numpy.matrix):
         orginp = self.inputs

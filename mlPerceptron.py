@@ -118,15 +118,12 @@ class MLP:
         self.generateWeights(a)
         self.calcOutputs()
         error = self.oLayer.errorFunc()
-        while(error > 0.5 and epochCount < 1000):
+        while(error > 0.5 and epochCount < 100000):
             self.epoch()
             epochCount += 1
             self.calcOutputs()
             error = self.oLayer.errorFunc()
-        print "Error: "
-        print error
-        print " Epoch Count: "
-        print epochCount
+        print "Error: " + str(error) + " Epoch Count: " + str(epochCount)
 
     def test(self, inp=numpy.matrix):
         orginp = self.iLayer.getOutputs()
