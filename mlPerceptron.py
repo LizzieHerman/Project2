@@ -1,122 +1,127 @@
 '''
-created on Oct 2 2017
+created on Oct 13 2017
 @author LizzieHerman
 '''
-import kClustering
 import random
-
-class node:
-    def __init__(self):
-        self.inputs = []
-        self.outputs = []
-        self.weights = []
-
-class inputLayer:
-    def __init__(self, i=0):
-        self.nInputs = i
-        self.inputs = []
-
-class hiddenLayer:
-    def __init__(self, i=0):
-        self.nInputs = i
-        self.inputs = []
-        self.outputs = []
-        self.weights = {}
-        for a in range(i):
-            self.weights.update({a:{}})
-            for b in range(i):
-                self.weights[a].update({b:0})
-
-    def generateWeights(self, a=0.0):
-        for i in range(self.nInputs):
-            for j in range(self.nInputs):
-                self.weights[i][j] = random.uniform(-a,a)
+import numpy
 
 
-class outputLayer:
-    def __init__(self, targs, i=0, o=0):
-        self.nInputs = i
+class Layer:
+    def __init__(self, o=0, d=0):
         self.nOutputs = o
-        self.inputs = []
-        self.outputs = []
-        self.targets = targs
-        self.weights = {}
-        for a in range(i):
-            self.weights.update({a:{}})
-            for b in range(o):
-                self.weights[a].update({b:0})
+        self.nDim = d
+        self.outputs = numpy.zeros(shape=(o, d))
+
+    def updateOutputs(self, inp=numpy.matrix):
+        self.outputs = inp
+
+    def getOutputs(self):
+        return self.outputs
+
+class hiddenLayer(Layer):
+    def __init__(self, prev=Layer, i=0, o=0, d=0):
+        Layer.__init__(self, o, d)
+        self.prevLayer = prev
+        self.nInputs = i
+        self.weights = numpy.zeros(shape=(i, o))
 
     def generateWeights(self, a=0.0):
         for i in range(self.nInputs):
             for j in range(self.nOutputs):
-                self.weights[i][j] = random.uniform(-a,a)
+                self.weights[i][j] = random.uniform(-a, a)
 
-    def findOutput(self, i=0, j=0):
-        return i * j
+    def updateOutputs(self, inp=numpy.matrix):
+        temp = (self.weights.T) * inp
+        self.outputs = numpy.tanh(temp)
+        return self.outputs
 
-    def errorFunc(self, j=0):
-        expec = self.targets[j]
-        temp = 0
+    def updateWeights(self, sigma=numpy.matrix, eta=0.0):
+        # back prop partial(q) = output(q) * (1 - output(q)) * SIGMAoverr w(qr)* partial deriv(r)
+        partial = self.outputs * (1 - self.outputs) * sigma
+        # new weight(p>q) = old weight(p>q) + eta * output(p) * partial deriv from back prop(q)
+        self.weights = self.weights * partial.T * eta
+        # return SIGMAoverq w(pq)* partial deriv(q)
+        return self.weights * partial
+
+
+class outputLayer(Layer):
+    def __init__(self, targs=numpy.matrix, prev=Layer, i=0, o=0, d=0):
+        Layer.__init__(self, o, d)
+        self.prevLayer = prev
+        self.nInputs = i
+        self.targets = targs # will be a (o x 1) matrix
+        self.weights = numpy.zeros(shape=(i, o))
+        self.outputs = numpy.zeros(shape=(o,1))
+
+    def generateWeights(self, a=0.0):
         for i in range(self.nInputs):
-            temp += pow((expec - self.findOutput(i,j)),2)
-        return (temp / 2)
+            for j in range(self.nOutputs):
+                self.weights[i][j] = random.uniform(-a, a)
+
+    def updateOutputs(self, inp=numpy.matrix):
+        temp = (self.weights.T) * inp
+        self.outputs = temp * numpy.ones(shape=(self.nDim, 1))
+        return self.outputs
 
     def updateWeights(self, eta=0.0):
-        return eta
+        # partial(q) = (target(q) - output(q)) * output(q) * (1 - output(q))
+        partial = (self.targets - self.outputs) * self.outputs * (1 - self.outputs)
+        # new weight(p>q) = old weight(p>q) + eta * output(p) * partial deriv from back prop(q)
+        self.weights = self.weights * partial.T * eta
+        # return SIGMAoverq w(pq)* partial deriv(q)
+        return self.weights * partial
+
+    def errorFunc(self):
+        temp = numpy.power((self.targets - self.outputs),2)
+        return (0.5 * numpy.sum(temp))
 
 
 class MLP:
-    def __init__(self, pnts, targs, l=0, i=0, o=0, lr=0.0):
-        self.points = pnts
-        self.nOutputs = o
-        self.iLayer = inputLayer(i)
+    def __init__(self, inps=numpy.matrix, targs=numpy.matrix, i=0, h=0, o=0, d=0, l=0, lr=0.0):
+        self.iLayer = Layer(i, d)
+        self.nLayers = l
+        self.nDim = d
         self.hLayers = []
-        for i in range(l):
-            self.hLayers.append(hiddenLayer(i))
-        self.oLayer = outputLayer(targs,i,o)
+        last = self.iLayer
+        for a in range(l):
+            numins = h
+            if a == 0:
+                numins = i
+            last = hiddenLayer(last, numins, h, d)
+            self.hLayers.append(last)
+        self.oLayer = outputLayer(targs, last, h, o, d)
         self.eta = lr
+        self.iLayer.updateOutputs(inps)
 
     def generateWeights(self, a=0.0):
         self.oLayer.generateWeights(a)
         for hid in self.hLayers:
             hid.generateWeights(a)
 
-    def updateWeights(self):
-        return self.oLayer.updateWeights(self.eta)
+    def calcOutputs(self):
+        inputs = self.iLayer.getOutputs()
+        for i in range(self.nLayers):
+            inputs = self.hLayers[i].updateOutputs(inputs)
+        inputs = self.oLayer.updateOutputs(inputs)
 
-    def backPropagation(self):
-        '''
-            \delta\(N),l = targ,l - out(N),l
-            \delta\(n),l = (SIGMAoverk \delta\(n+1),k*w(n+1),lk)*f'(SIGMAoverj out(n-1),j W(n),jl)
-            DELTAw(n),hl = eta SIGMAoverp(\delta\(n),l*out(n-1),h)
-                #activation functions
-                #f(x)  = math.tanh(x)
-                #f'(x) = 1 - math.pow(math.tanh(x),2)
-            '''
-        total = 1.0
-        return total
+    def epoch(self):
+        deltas = self.oLayer.updateWeights(self.eta)
+        for i in range((self.nLayers - 1), -1, -1):
+            deltas = self.hLayers[i].updateWeights(deltas, self.eta)
 
-    def adalineRule(self):
-        # w <- w + eta(targ - out)x
-        # E = (targ - out)^2
-        total = 1.0
-        return total
+    def train(self, a=0.0):
+        epochCount = 0
+        self.generateWeights(a)
+        self.calcOutputs()
+        error = self.oLayer.errorFunc()
+        while(error > 0.5 and epochCount < 1000):
+            self.epoch()
+            epochCount += 1
+            self.calcOutputs()
+            error = self.oLayer.errorFunc()
+        print "Error: " + error + " Epoch Count: " + epochCount
 
-'''
-NOTES
-SSE Cost function. linear output activations, sigmoid hidden activation
-E(cost)SSE = (1/2){(SIGMA over p)[(SIGMA over j) (targetp,j - output(N)p,j)^2]}
-DELTA w(m),kl = - eta ( partial E({w(n),ij})) / (partial w(m),kl)
-(m/n) are the layer, for weights its the layer they are going to
-w,ij weight from i to j
-final layer outputs depend onm all earlier layers of weights not just final one, 
-  algorithm should automatically adjust all these earlier weights and outputs
-'''
-'''
-Training for multi-layer networks is similar to that for single layer networks:
-5. Apply the weight update DELTAwjk(n)= −etapartialE(w(n),jk)/partialw(n),jk to each 
-   weight w(n),jk for each training pattern p. One set of updates of all the weights for
-   all the training patterns is called one epoch of training.
-6. Repeat step 5 until the network error function is “small enough”.
-To be practical, algebraic expressions need to be derived for the weight updates
-'''
+    def test(self, inp=numpy.matrix):
+        self.iLayer.updateOutputs(inp)
+        self.calcOutputs()
+        return self.oLayer.getOutputs()

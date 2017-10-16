@@ -1,125 +1,189 @@
 '''
-created on Oct 2 2017
+created on Oct 13 2017
 @author LizzieHerman
 '''
 
-import kClustering
 import random
 import math
+import numpy
+
+class Cluster:
+    def __init__(self, k=0, l=0, h=0, d=0):
+        self.k = k # number of clusters to make
+        self.low = l # low end of the range points are in
+        self.high = h # high end of the range points are in
+        self.dim = d # dimension of the vectors
+        self.centroids = numpy.zeros(shape=(k,d))
+        self.clusters = {} # key is the int of the index of the centroid in centroids
+        self.numIters = 0
+
+    def genRandVecs(self):
+        for i in range(self.k):
+            for j in range(self.dim):
+                self.centroids[i][j] = random.uniform(self.low, self.high)
+            self.clusters.update({i:[]})
+
+    def assignPoints(self, points=numpy.matrix):
+        psize = points.shape[0]
+        for i in range(psize):
+            temp = self.centroids - points[i]
+            temp = numpy.power(temp,2)
+            temp = temp * numpy.ones(shape=(self.dim, 1))
+            cent = numpy.argmax(temp)
+            self.clusters.get(cent).append(points[i])
+
+    def updateCentroids(self, points):
+        newCentroids = numpy.zeros(self.centroids.shape)
+        for i in range(self.k):
+            temp = numpy.ones(shape=(1,self.dim))
+            # check to see if centroid has no points to be center of
+            # reinitialize if this happens
+            if self.clusters.get(i) in None:
+                for j in range(self.dim):
+                    newCentroids[i][j] = random.uniform(self.low, self.high)
+            else:
+                a = 0
+                for clust in self.clusters.get(i):
+                    a += 1
+                    temp = temp + clust
+                temp = temp / a
+                newCentroids[i] = temp
+        return newCentroids
+
+    def shouldStop(self, newCentroids):
+        if self.numIters >= 1000:
+            return True
+        return numpy.equal(newCentroids, self.centroids)
+
+    def run(self, points):
+        self.numIters += 1
+        self.genRandVecs()
+        self.assignPoints(points)
+        newCentroids = self.updateCentroids(points)
+        while not self.shouldStop(newCentroids):
+            self.numIters += 1
+            self.centroids = newCentroids
+            for val in self.clusters.values():
+                del val[:]
+            self.assignPoints(points)
+            newCentroids = self.updateCentroids(points)
+        return newCentroids
 
 class RBF:
-    def __init__(self, point, k=0, d=0, l=0, h=0):
-        self.points = point
+    def __init__(self, inps=numpy.matrix, targ=numpy.matrix, i=0, k=0, o=0, d=0, l=0, h=0):
+        self.targets = targ
         self.k = k  # number of clusters to make
         self.dim = d  # dimension of the vectors
         self.low = l  # low end of the range points are in
         self.high = h  # high end of the range points are in
-        self.centroids = []
+        self.centroids = numpy.zeros(shape=(k,d))
         self.sigma = 0.0
-        self.weights = []
-        self.center = None
+        self.inputs =  inps
+        self.numInputs = i
+        self.weights = numpy.zeros(shape=(k, o))
+        self.numOutputs = o
+        self.acts = numpy.zeros(shape=(k,1))
+        self.outputs = numpy.zeros(shape=(o,d))
+        self.actFunc = 0
 
     def getCentroids(self):
-        clust = kClustering.Cluster(self.k, self.low, self.high, self.dim)
-        return clust.run(self.points)
+        clust = Cluster(self.k, self.low, self.high, self.dim)
+        return clust.run(self.inputs)
 
     def finddmax(self):
         maxDist = 0.0
         for i in range(self.k):
-            for j in range( (i+1), self.k):
-                temp = self.centroids[i].distance(self.centroids[j])
-                if temp > maxDist:
-                    maxDist = temp
+            temp = self.centroids - self.centroids[i]
+            temp = numpy.power(temp, 2)
+            temp = temp * numpy.ones(shape=(self.dim, 1))
+            dist = numpy.max(temp)
+            if(dist > maxDist):
+                maxDist = dist
         return maxDist
 
     def calcSigma(self):
         return (self.finddmax() / math.sqrt(2*self.k))
 
     def setWeights(self, a=0.0):
-        for i in range(self.k):
-            self.weights.append(random.uniform(-a,a))
-
-    def findCenter(self):
-        temp = []
-        for i in range(self.dim):
-            temp.append(0)
-            for j in range(self.k):
-                temp[i] += self.centroids[j].getPosition(i)
-            temp[i] = temp[i] / self.k
-        vec = kClustering.Vector(temp, self.dim)
-        return vec
+        for i in range(self.numFuncs):
+            for j in range(self.numOutputs):
+                self.weights[i][j] = random.uniform(-a,a)
 
     def linearActFunc(self, j=0):
-        return self.center.distance(self.centroids[j])
+        temp = self.inputs - self.centroids[j]
+        temp = numpy.power(temp, 2)
+        temp = temp * numpy.ones(shape=(self.dim, 1)) * self.sigma
+        return numpy.sum(temp)
 
     def gaussianActFunc(self, j=0):
-        top = math.pow(self.center.distance(self.centroids[j]), 2)
+        temp = self.inputs - self.centroids[j]
+        temp = numpy.power(temp, 2)
+        temp = temp * numpy.ones(shape=(self.dim, 1))
+        temp = numpy.power(temp, 2)
+        top = numpy.sum(temp)
         bottom = 2 * math.pow(self.sigma, 2)
         return math.exp(-(top / bottom))
 
     def hardysActFunc(self, j=0):
-        left = math.pow(self.sigma, 2) 
-        right = math.pow(self.center.distance(self.centroids[j]), 2)
+        left = math.pow(self.sigma, 2)
+        temp = self.inputs - self.centroids[j]
+        temp = numpy.power(temp, 2)
+        temp = temp * numpy.ones(shape=(self.dim, 1))
+        temp = numpy.power(temp, 2)
+        right = numpy.sum(temp)
         return math.sqrt(left + right)
 
-    def weightUpdate(self, j=0, alpha=0.0, eta=0.0, prevChange=0.0):
-        err = 1.0
-        left = ((1 - alpha) * eta * err) + (alpha * prevChange)
-        #∆wj^t = (1-α)*η*∇wj*Err + α*∆wj^(t-1)
+    def calcOutput(self):
+        for j in range(self.k):
+            if self.actFunc < 0:
+                act = self.linearActFunc(j)
+            elif self.actFunc > 0:
+                act = self.gaussianActFunc(j)
+            else:
+                act = self.hardysActFunc(j)
+            self.acts[j] = act
+        self.outputs = self.weights.T * self.acts
 
-    def run(self, a=0.0):
+    def errorFunc(self):
+        err = self.outputs - self.targets
+        return numpy.sum(err)
+
+    def weightUpdate(self, eta=0.0):
+        err = self.outputs - self.targets
+        update = self.acts * err.T * eta
+        self.weights = self.weights + update
+
+    def sigmaUpdate(self, eta=0.0):
+        err = self.outputs - self.targets
+        temp = err * self.acts.T
+        part = numpy.zeros(shape=(self.k,1))
+        for i in range(self.k):
+            norm = self.inputs - self.centroids[i]
+            o = numpy.sum(norm) / self.numInputs
+            part[i] = (math.pow(o,2) / math.pow(self.sigma, 3))
+        update = numpy.sum(temp * part) * eta
+        self.sigma = self.sigma + update
+
+    def epoch(self, weta=0.0, seta=0.0):
+        self.weightUpdate(weta)
+        self.sigmaUpdate(seta)
+
+    def train(self, a=0.0, weta=0.0, seta=0.0, act=0):
+        epochCount = 0
+        self.acts = act
         self.centroids = self.getCentroids()
         self.sigma = self.calcSigma()
         self.setWeights(a)
-        self.center = self.findCenter()
+        self.calcOutput()
+        error = self.errorFunc()
+        while(error > 0.5):
+            self.epoch(weta, seta)
+            epochCount += 1
+            self.calcOutput()
+            error = self.errorFunc()
+        print "Error: " + error + " Epoch Count: " + epochCount
 
-
-'''
-#1. Choose the number (m) and initial coordinates of the centres (R) of the RBF functions.
-m = k R = centroids
-
-#2. Choose the initial value of the spread parameter (σ) for each centre (R).
-we're using fixed σ for all points σ = (dmax)/(sqrt(2k))
-σ = sigma
-
-#3. Initialise the weights/coefficients (w) to small random values [-1,1].
-overloaded function can include a float parameter a where w will be in range [-a,a], dont include a parameter w [-1,1]
-w = weights index matches with centroids'
-
-4. For each epoch (e)
-
-    5. For each input vector/pattern (x(p))
-
-        6. Calculate the output (y) of each output node (o) using eq. 1.
-
-        7. Update the network parameters (w, R, σ) using eqs. 6, 7, 8, 9.
-
-    8. end for (p = n)
-
-9. end for (e = total epochs)
-Note: Steps 1 and 2 can be performed using a clustering algorithm such as Kohonen SOMs.
-'''
-'''
-∇∆←αηϕσ√
-equations
--spread σ
-  σ = dmax/√(2*k)
-  dmax is the greatest distance between the selected centroids
-    σ is RBF.sigma, dmax is given by RBF.finddmax(), k is RBF.k
--weight update
-  ∆wj^t = (1-α)*η*∇wj*Err + α*∆wj^(t-1)
-  α and η are tunable parameters, t represents time, j denotes which centroid this is the weight of, Err is the error function
-    α is @@@.alpha, η is @@@.eta, t is @@@.time, j is the index of weights, Err is @@@@@@@@
--Linear Activation Function
-  ϕj(x) = ||x - xj||
-    xj is the current centroid, x is the centroid of the centroids
-      xj is RBF.centroids[j], x is RBF.center
--Gaussian Activation Function
-  ϕj(x) = exp[-(||x - xj||^2)/(2*σ^2)] 
-    xj is the current centroid, x is the centroid of the centroids, σ is the spread from the centroid
-      xj is RBF.centroids[j], x is RBF.center, σ is RBF.sigma
--Hardy’s Multiquadric Activattion Function
-  ϕj(x) = √(σ^2 + ||x - xj||^2)
-    xj is the current centroid, x is the centroid of the centroids, σ is the spread from the centroid
-      xj is RBF.centroids[j], x is RBF.center, σ is RBF.sigma
-'''
+    def test(self, inp=numpy.matrix):
+        self.inputs = inp
+        self.calcOutput()
+        return self.outputs

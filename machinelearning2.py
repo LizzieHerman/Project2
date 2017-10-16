@@ -3,6 +3,7 @@
 
 #import numpy as np
 import random
+import numpy
 
 #need to make layers, not individual nodes. Still unsure if there's any way to "keep our inputs intact" but as of now it seems we have to split every simension into another class.
 
@@ -32,38 +33,6 @@ def newLayer(rows, columns, weight):    #weight should start arbitrairily low, s
     weightMatrix.append(rowVal) #adding a new row to our list of rows.
 #last issue is updating individual weights algorithmically -- or just save each individual layer of weights -- so we can continue to use those.
         
-        
-        
-#using Rosenbrock to produce input matrixes:
-
-#not quite working as a generic function, abandoned for making a method for a 2d rosen, 3d, 4d, etc...
-#DISREGUARD -- not operational
-def rosenInput(dimensions):                         #IF WE WANT A SMALLER TESTPLANE, REDUCE THE 10** to the size of the new square for each plane
-    rosenOutput = [[0 for x in range(dimensions+1)] for y in range(10**dimensions)]  #dimensions for a number of rows matching the dimensionality of our Rosenbrock, +1 column for the output of Rosenbrock for those values in the row 
-    
-    #10^dimensions to hold all X, Y (Z, etc...) combinations for a 10 by 10 (by 10 by 10...) grid.
-    #in this particular case, for a 2D Rosenbrock... we need a loop for each dimension, how do we do that, besides making a seperate method for each dimensionality we plan to use.
-    offset = -1
-    for d in range(dimensions-1):
-        offset += 1     #so that our matrix gives combinations of vectors, not the same 10 vectors over and over and over again.
-        for x in range(0,10**dimensions):    
-            #print('x = ', x)
-            if x%10 == 0 and x != 0:
-                rosenOutput[x][d] = 10
-            else:
-                rosenOutput[x][d] = x%10+offset #our first column is our X values, our second our Y
-                #now that our matrix is full our input vectors, we need to get the output of those vectors when plugged into the Rosenbrock for the last value in a given row.
-            print(rosenOutput[x])
-    for x in range(rosenOutput[y]):   
-        vector = ''
-        for y in range(dimensions-1):
-            vector.extend(rosenOutput[x][y]) #getting all of our row's vectors in a single list
-        rosenOutput[x][dimensions+1] = rosenbrock(vector)   #our last value in the row is output of this vector which comprises the row plugged into the rosenbrock function
-            #we can only do this one way-- each column (or, alternatively, row) of our input matrix must be entirely X, Y, Z, or etc values, and the last column would be the output of the Rosenbrock
-    print("rosenbrock finished")
-    print(rosenOutput)
-    
-    
 #Our FUNCTIONING Input generation methods:
 
 #For each of our 100 indeces, our X counts from 0 to 9, and then our Y iterates by 1. The last value is the Rosenbrock of our X and Y.    
@@ -74,6 +43,7 @@ def rosen2D():
         rosenOutput[x][1] = int(x/10)  #our "y" position counts how many 10s of Xes have occured
         rosenOutput[x][2] = rosenbrock([x%10,int(x/10)])    #our last position is always the Rosenbrock of X and Y
         #print(rosenOutput[x])  #To display the output of this function, decomment this line.
+     return rosenOutput
 
 #For each of our 1000 indeces, our X counts from 0 to 9, and then our Y iterates by 1. When Y iterates past 9 we return it to 0 and iterate Z, The last value is the Rosenbrock of our X and Y.    
 def rosen3D():       
