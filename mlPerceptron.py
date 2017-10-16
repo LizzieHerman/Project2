@@ -24,6 +24,7 @@ class hiddenLayer(Layer):
         self.prevLayer = prev
         self.nInputs = i
         self.weights = numpy.zeros(shape=(i, o))
+        self.lastWeightChange = numpy.zeros(shape=(i, o))
 
     def generateWeights(self, a=0.0):
         for i in range(self.nInputs):
@@ -35,14 +36,19 @@ class hiddenLayer(Layer):
         self.outputs = numpy.tanh(temp)
         return self.outputs
 
-    def updateWeights(self, sigma=numpy.matrix, eta=0.0):
+    def updateWeights(self, sigma=numpy.matrix, eta=0.0, alpha=None):
         # back prop partial(q) = output(q) * (1 - output(q)) * SIGMAoverr w(qr)* partial deriv(r)
         partial = numpy.dot(numpy.dot(self.outputs, (1 - self.outputs.T)), sigma)
-        # new weight(p>q) = old weight(p>q) + eta * output(p) * partial deriv from back prop(q)
-        self.weights = self.weights + numpy.dot(self.prevLayer.outputs, partial.T) * eta
+        if alpha is None:
+            # new weight(p>q) = old weight(p>q) + eta * output(p) * partial deriv from back prop(q)
+            self.weights = self.weights + eta * numpy.dot(self.prevLayer.outputs, partial.T)
+        else:
+            # delta weight(p>q)(t) = (1 - alpha) * eta * output(p) * partial deriv from back prop(q) + alpha * delta weight(p>q)(t-1)
+            self.lastWeightChange = (1 - alpha) * eta * numpy.dot(self.prevLayer.outputs, partial.T) + alpha * self.lastWeightChange
+            # weight(p>q)(t) = weight(p>q)(t-1) + delta weight(p>q)(t)
+            self.weights = self.weights + self.lastWeightChange
         # return SIGMAoverq w(pq)* partial deriv(q)
         return numpy.dot(self.weights, partial)
-
 
 class outputLayer(Layer):
     def __init__(self, targs=numpy.matrix, prev=Layer, i=0, o=0, d=0):
@@ -52,6 +58,7 @@ class outputLayer(Layer):
         self.targets = targs # will be a (o x 1) matrix
         self.weights = numpy.zeros(shape=(i, o))
         self.outputs = numpy.zeros(shape=(o,1))
+        self.lastWeightChange = numpy.zeros(shape=(i, o))
 
     def generateWeights(self, a=0.0):
         for i in range(self.nInputs):
@@ -63,12 +70,18 @@ class outputLayer(Layer):
         self.outputs = numpy.tanh(temp)
         return self.outputs
 
-    def updateWeights(self, eta=0.0):
+    def updateWeights(self, eta=0.0, alpha=None):
         # partial(q) = (target(q) - output(q)) * output(q) * (1 - output(q))
         partial = numpy.dot(numpy.dot((self.targets - self.outputs), self.outputs.T), (1 - self.outputs))
-        # new weight(p>q) = old weight(p>q) + eta * output(p) * partial deriv from back prop(q)
-        self.weights = self.weights + numpy.dot(self.prevLayer.outputs, partial.T) * eta
-        # return SIGMAoverq w(pq)* partial deriv(q)
+        if alpha is None:
+            # new weight(p>q) = old weight(p>q) + eta * output(p) * partial deriv from back prop(q)
+            self.weights = self.weights + numpy.dot(self.prevLayer.outputs, partial.T) * eta
+        else:
+            # delta weight(p>q)(t) =  (1 - alpha)(eta * output(p) * partial deriv from back prop(q) + alpha * delta weight(p>q)(t-1)
+            self.lastWeightChange = (1 - alpha) * eta * numpy.dot(self.prevLayer.outputs, partial.T) + alpha * self.lastWeightChange
+            # weight(p>q)(t) = weight(p>q)(t-1) + delta weight(p>q)(t)
+            self.weights = self.weights + self.lastWeightChange
+            # return SIGMAoverq w(pq)* partial deriv(q)
         return numpy.dot(self.weights, partial)
 
     def errorFunc(self):
@@ -77,7 +90,7 @@ class outputLayer(Layer):
 
 
 class MLP:
-    def __init__(self, inps=numpy.matrix, targs=numpy.matrix, i=0, h=0, o=0, d=0, l=0, lr=0.0):
+    def __init__(self, inps=numpy.matrix, targs=numpy.matrix, i=0, h=0, o=0, d=0, l=0):
         self.iLayer = Layer(i, d)
         self.nLayers = l
         self.numInputs = i
@@ -94,7 +107,6 @@ class MLP:
                 last = hiddenLayer(last, numins, h, d)
                 self.hLayers.append(last)
             self.oLayer = outputLayer(targs, last, h, o, d)
-        self.eta = lr
         self.iLayer.updateOutputs(inps)
 
     def generateWeights(self, a=0.0):
@@ -108,22 +120,30 @@ class MLP:
             inputs = self.hLayers[i].updateOutputs(inputs)
         inputs = self.oLayer.updateOutputs(inputs)
 
-    def epoch(self):
-        deltas = self.oLayer.updateWeights(self.eta)
-        for i in range((self.nLayers - 1), -1, -1):
-            deltas = self.hLayers[i].updateWeights(deltas, self.eta)
+    def epoch(self, eta=0.0, alpha=None):
+        if alpha is None:
+            deltas = self.oLayer.updateWeights(eta)
+            for i in range((self.nLayers - 1), -1, -1):
+                deltas = self.hLayers[i].updateWeights(deltas, eta)
+        else:
+            deltas = self.oLayer.updateWeights(eta, alpha)
+            for i in range((self.nLayers - 1), -1, -1):
+                deltas = self.hLayers[i].updateWeights(deltas, eta, alpha)
 
-    def train(self, a=0.0):
+    def train(self, a=0.0, eta=0.0, alpha=None):
         epochCount = 0
         self.generateWeights(a)
         self.calcOutputs()
         error = self.oLayer.errorFunc()
         while(error > 0.5 and epochCount < 100000):
-            self.epoch()
+            if alpha is None:
+                self.epoch(eta)
+            else:
+                self.epoch(eta, alpha)
             epochCount += 1
             self.calcOutputs()
             error = self.oLayer.errorFunc()
-        print "Error: " + str(error) + " Epoch Count: " + str(epochCount)
+        print "\t\tError: ", error, " Epoch Count: ", epochCount
 
     def test(self, inp=numpy.matrix):
         orginp = self.iLayer.getOutputs()

@@ -68,7 +68,7 @@ class Cluster:
                 del val[:]
             self.assignPoints(points)
             newCentroids = self.updateCentroids(points)
-        print str(self.k) + "-Clustering:   Iteration Count: " + str(self.numIters)
+        print "\t\t", self.k, "-Clustering:   Iteration Count: ", self.numIters
         return newCentroids
 
 class RBF:
@@ -181,7 +181,7 @@ class RBF:
             epochCount += 1
             self.calcOutput()
             error = self.errorFunc()
-            print "Error: " + str(error) + " Epoch Count: " + str(epochCount)
+            print "\t\tError: ", error, " Epoch Count: ", epochCount
 
     def test(self, inp=numpy.matrix):
         orginp = self.inputs
