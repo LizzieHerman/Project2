@@ -1,0 +1,5 @@
+-"Make sure to include a txt file about group participation next time."
+Ryan's (my own) code encapsulates using the rosenbrock function to producing input, generating input samples and performing cross validation, making weight matrixes to emulate layers of nodes, and assessing function output.
+Lizzie's code encapsulates EVERYTHING ELSE (backprop, matrix multiplication, feed forward, nodeular activation functions, weight updating)
+
+Objectively, while we both did our best to produce the code we'd need, I can admit Lizzie did most of the heavy lifting as I failed to produce anything useful code wise for the 3rd week of the assignment as I was still trying to fully comprehend the problem at that point.
