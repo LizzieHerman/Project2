@@ -1,0 +1,1358 @@
+C:\Python27\python.exe C:/Users/Lizzi/Documents/SeniorYear/MachineLearning/Project2/Project2/machinelearning2.py
+2D Rosenbrock
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  401980016616.0  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  401973302520.0  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  401973302520.0  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  640117997195.0  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  640110436311.0  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  640110436311.0  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.48538013626e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.4853661054e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.4853661054e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.28503390557e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.28502037905e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.28502037905e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.1096491999e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.10963805613e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.10963805613e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.41185183434e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.41183821549e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.41183821549e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.14435218007e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.14434092674e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.14434092674e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.11611770445e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.11610736162e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.11611770445e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.31647718786e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.31646333412e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.31646333412e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  565274074482.0  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  565266628618.0  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  565266628618.0  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+3D Rosenbrock
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  3.33271594504e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  3.33268698617e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  3.33268698617e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  2.77459648606e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  2.77457182093e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  2.77457182093e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.09467979493e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.09466453081e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.09466453081e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  2.8145546444e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  2.8145318084e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  2.8145318084e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  3.67470474354e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  3.67467693321e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  3.67467693321e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  3.20066382384e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  3.20063520544e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  3.20063520544e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.57905692707e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.57903832583e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.57903832583e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  6.2890242628e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  6.28898484395e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  6.28898484395e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  2.32782219751e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  2.327798797e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  2.327798797e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  4.21486245098e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  4.21482958858e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  4.21482958858e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+4D Rosenbrock
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  9.73699998981e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  9.73694285537e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  9.73694285537e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.12991873093e+13  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.12991188439e+13  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.12991188439e+13  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.06130842252e+13  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.06130156177e+13  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.06130156177e+13  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  3.88503819443e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  3.88500125548e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  3.88500125548e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  8.59672683614e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  8.59666820431e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  8.59666820431e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  9.08171499104e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  9.08164970021e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  9.08164970021e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  7.61554831964e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  7.61549221734e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  7.61549221734e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  6.51784057728e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  6.51778918529e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  6.51778918529e+12  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.09799625599e+13  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.09798990452e+13  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.09798990452e+13  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.08207728259e+13  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.08207050367e+13  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.08207050367e+13  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+5D Rosenbrock
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  3.05222340212e+20  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  3.05222339944e+20  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  3.05222339944e+20  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  7.27381131979e+20  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  7.27381131543e+20  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  7.27381131543e+20  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  5.4436501914e+20  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  5.44365018808e+20  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  5.44365018808e+20  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  7.81186646742e+20  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  7.81186646256e+20  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  7.81186646256e+20  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  7.40580519811e+20  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  7.40580519339e+20  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  7.40580519339e+20  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  4.68771438416e+20  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  4.68771438033e+20  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  4.68771438033e+20  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  7.3881507225e+20  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  7.38815071753e+20  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  7.38815071753e+20  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  6.16133739882e+20  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  6.16133739411e+20  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  6.16133739411e+20  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  4.14862387815e+20  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  4.1486238744e+20  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  4.1486238744e+20  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  7.36594460469e+20  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  7.36594460046e+20  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  7.36594460046e+20  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+6D Rosenbrock
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  2.03550028374e+21  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  2.03550028275e+21  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  2.03550028275e+21  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.43083021366e+21  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.43083021279e+21  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.43083021279e+21  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.21825317231e+21  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.21825317151e+21  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.21825317151e+21  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.87963772885e+21  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.87963772775e+21  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.87963772775e+21  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  2.49757200272e+21  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  2.49757200164e+21  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  2.49757200164e+21  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.96861559921e+21  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.96861559822e+21  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  1.96861559822e+21  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  2.2841799801e+21  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  2.28417997907e+21  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  2.28417997907e+21  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  2.81051563252e+21  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  2.81051563128e+21  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  2.81051563128e+21  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  2.05711644439e+21  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  2.05711644325e+21  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  2.05711644325e+21  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  0  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  2.16724846803e+21  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  1  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  2.16724846702e+21  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	MLP- Hidden Layers:  2  # inputs:  20  Nodes in Hidden Layers: 15 Learning Rate: 0.1 RandWeightBounds: [-0.5,0.5]
+		Training with momentum, alpha = 0.25
+		Error:  2.16724846702e+21  Epoch Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Linear  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Guassian  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+	RBF- Activation Function:  Hardy's  # inputs:  20  Clusters:  6  Learning Rates: 0.1 RandWeightBounds: [-0.5,0.5]
+		6 -Clustering:   Iteration Count:  100000
+	The average error produced by this Neural Net was:  0.0
+
+Process finished with exit code 0
